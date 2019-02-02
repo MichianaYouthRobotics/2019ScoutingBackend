@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Scouts</title>
+</head>
+<body>
+<h1>All Scouts</h1>
+<table style="width:100%">
+    <tr style="font-weight: bold">
+        <td>Person</td>
+        <td>Robot Number</td>
+        <td>Date</td>
+        <td>Match Number</td>
+        <td>Hatches Secured</td>
+    </tr>
+    {% for each_scout in all_scouts %}
+    <tr>
+        <td>{{each_scout.person}}</td>
+        <td>{{each_scout.robot_number}}</td>
+        <td>{{each_scout.event_date}}</td>
+        <td>{{each_scout.match_number}}</td>
+        <td>{{each_scout.hatches_secured}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'scout' %}">Do you want to scout a robot?</a>
+</body>
+</html>
